@@ -1,0 +1,35 @@
+function charityGridController($window, $scope, $http, $q) {
+    var vm = this;
+    $scope.card = {};
+    $scope.card.title = 'test';
+    vm.page = 0;
+    vm.shots = [];
+    vm.loadingMore = false;
+
+    vm.loadMoreShots = function () {
+
+        console.log('loading more')
+
+        if (vm.loadingMore) return;
+        vm.page++;
+        // var deferred = $q.defer();
+        vm.loadingMore = true;
+        var promise = $http.get('https://api.dribbble.com/v1/shots/?per_page=5&page=' + vm.page + '&access_token=3df6bcfc60b54b131ac04f132af615e60b0bd0b1cadca89a4761cd5d125d608f');
+        promise.then(function (data) {
+
+            var shotsTmp = angular.copy(vm.shots);
+            shotsTmp = shotsTmp.concat(data.data);
+            vm.shots = shotsTmp;
+            vm.loadingMore = false;
+
+        }, function () {
+            vm.loadingMore = false;
+        });
+        return promise;
+    };
+
+    vm.loadMoreShots();
+    $window.onscroll = function(){
+        console.log('stiff')
+    };
+}

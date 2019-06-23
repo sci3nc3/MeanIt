@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" ng-app="meanitApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <meta name="description" content="Mean It">
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:title" content="Mean it" />
+    <title ng-bind="Page.getProperty('title')">Mean it</title>
+    <link rel="icon" type="image/png" href="img/brand/meanit-favicon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/animate.css/animate.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.4/angular-material.css'>
+    <!--[if lte IE 8]><script src="js/eventually/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/eventually/main.css" />
+    <link rel="stylesheet" href="css/landing.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/eventually/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/eventually/ie9.css" /><![endif]-->
+</head>
+
+<body>
+    <!-- ANGULAR DYNAMIC CONTENT -->
+    <div ng-view></div>
+    <!-- JS -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/angular-resource/angular-resource.min.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-aria.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-messages.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.4/angular-material.js'></script>
+    <script src='libs/angulargrid/angulargrid.js'></script>
+    <!-- ANGULAR App -->
+    <script src="js/controllers/mainController.js"></script>
+    <script src="js/controllers/landingController.js"></script>
+    <script src="js/controllers/charityGridController.js"></script>
+    <script src="js/services/emailService.js"></script>
+    <script src="js/appRoutes.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Scripts -->
+    <!--[if lte IE 8]><script src="js/eventually/respond.min.js"></script><![endif]-->
+    <script src="js/eventually/main.js"></script>
+</body>
+
+</html>

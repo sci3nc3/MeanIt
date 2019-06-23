@@ -1,0 +1,30 @@
+{
+  "name": "meanit",
+  "version": "1.0.0",
+  "main": "server.js",
+  "authors": "Radu Blana",
+  "license": "Apache-2.0",
+  "description": "",
+  "dependencies": {
+    "angulargrid": "^0.6.3",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "~1.4.2",
+    "bower": "*",
+    "express": "^4.5.1",
+    "express-session": "^1.14.2",
+    "js-string-escape": "^1.0.1",
+    "method-override": "~2.0.2",
+    "mongod": "*",
+    "mongoose": "~4.4",
+    "passport": "^0.3.2",
+    "passport-facebook": "^1.0.0",
+    "passport-local": "^1.0.0"
+  },
+  "scripts": {
+    "test": "exit 0",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "*"
+  }
+}
